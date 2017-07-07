@@ -13,6 +13,8 @@
 		40B6C3F61F0FE0A7002D8E1E /* Unsplashed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40B6C3F41F0FE0A7002D8E1E /* Unsplashed.xcdatamodeld */; };
 		40B6C3F81F0FE0A7002D8E1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B6C3F71F0FE0A7002D8E1E /* Assets.xcassets */; };
 		40B6C3FB1F0FE0A7002D8E1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B6C3F91F0FE0A7002D8E1E /* LaunchScreen.storyboard */; };
+		40B6C4041F0FE10F002D8E1E /* TabbarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B6C4021F0FE10F002D8E1E /* TabbarMenu.swift */; };
+		40B6C4051F0FE10F002D8E1E /* AnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B6C4031F0FE10F002D8E1E /* AnimatedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		40B6C3F71F0FE0A7002D8E1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40B6C3FA1F0FE0A7002D8E1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40B6C3FC1F0FE0A7002D8E1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40B6C4021F0FE10F002D8E1E /* TabbarMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarMenu.swift; sourceTree = "<group>"; };
+		40B6C4031F0FE10F002D8E1E /* AnimatedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		40B6C3EC1F0FE0A7002D8E1E /* Unsplashed */ = {
 			isa = PBXGroup;
 			children = (
+				40B6C4021F0FE10F002D8E1E /* TabbarMenu.swift */,
+				40B6C4031F0FE10F002D8E1E /* AnimatedButton.swift */,
 				40B6C3ED1F0FE0A7002D8E1E /* AppDelegate.swift */,
 				40B6C3EF1F0FE0A7002D8E1E /* ViewController.swift */,
 				40B6C3F11F0FE0A7002D8E1E /* Main.storyboard */,
@@ -139,8 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40B6C4041F0FE10F002D8E1E /* TabbarMenu.swift in Sources */,
 				40B6C3F01F0FE0A7002D8E1E /* ViewController.swift in Sources */,
 				40B6C3EE1F0FE0A7002D8E1E /* AppDelegate.swift in Sources */,
+				40B6C4051F0FE10F002D8E1E /* AnimatedButton.swift in Sources */,
 				40B6C3F61F0FE0A7002D8E1E /* Unsplashed.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
