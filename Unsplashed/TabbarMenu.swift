@@ -156,7 +156,7 @@ class TabbarMenu: UIView {
                 self.normalRect.center = CGPoint(x: self.normalRect.center.x, y: UIScreen.main.bounds.size.height - 30 - 50)
                 self.backDimmingView.alpha = 0.0
             }, completion: { (finished) in
-                self.backDimmingView.removeFromSuperview()
+                //self.backDimmingView.removeFromSuperview()
             })
             
             UIView.animate(withDuration: 0.25, delay:0.0, options: .curveEaseOut, animations: { () -> Void in
