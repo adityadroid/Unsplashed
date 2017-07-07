@@ -106,11 +106,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDb-ro-HeS">
                                 <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3MQ-bU-tPu">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3MQ-bU-tPu">
+                                        <rect key="frame" x="60" y="0.0" width="255" height="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="21"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="DdS-d7-6g5"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WX1-kQ-3um">
                                         <rect key="frame" x="315" y="0.0" width="60" height="50"/>
@@ -128,32 +131,41 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.53518300513698636" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="3MQ-bU-tPu" secondAttribute="bottom" id="09i-2L-1QE"/>
-                                    <constraint firstItem="3MQ-bU-tPu" firstAttribute="leading" secondItem="HDb-ro-HeS" secondAttribute="leading" id="3Zw-Ci-XbO"/>
-                                    <constraint firstItem="WX1-kQ-3um" firstAttribute="leading" secondItem="3MQ-bU-tPu" secondAttribute="trailing" id="9cU-4I-3uh"/>
+                                    <constraint firstItem="3MQ-bU-tPu" firstAttribute="leading" secondItem="HDb-ro-HeS" secondAttribute="leading" constant="60" id="3Zw-Ci-XbO"/>
                                     <constraint firstAttribute="trailing" secondItem="WX1-kQ-3um" secondAttribute="trailing" id="9li-Uk-egc"/>
                                     <constraint firstAttribute="height" constant="50" id="XwZ-rk-Iva"/>
-                                    <constraint firstItem="3MQ-bU-tPu" firstAttribute="top" secondItem="HDb-ro-HeS" secondAttribute="top" id="ckO-f7-gU1"/>
                                     <constraint firstItem="WX1-kQ-3um" firstAttribute="leading" secondItem="3MQ-bU-tPu" secondAttribute="trailing" id="kTP-LG-zvH"/>
                                     <constraint firstAttribute="bottom" secondItem="WX1-kQ-3um" secondAttribute="bottom" id="kek-ie-pw4"/>
                                     <constraint firstItem="WX1-kQ-3um" firstAttribute="top" secondItem="HDb-ro-HeS" secondAttribute="top" id="oWw-EQ-UIE"/>
-                                    <constraint firstItem="3MQ-bU-tPu" firstAttribute="leading" secondItem="HDb-ro-HeS" secondAttribute="leading" id="rLb-lk-sQZ"/>
                                     <constraint firstItem="3MQ-bU-tPu" firstAttribute="top" secondItem="HDb-ro-HeS" secondAttribute="top" id="wya-rc-U3d"/>
-                                    <constraint firstAttribute="bottom" secondItem="3MQ-bU-tPu" secondAttribute="bottom" id="yqy-cZ-Wch"/>
                                 </constraints>
                             </view>
+                            <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pU7-TI-NR2">
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ujI-cX-lgY">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="597"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.44665025679999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="pU7-TI-NR2" secondAttribute="trailing" constant="-16" id="4ta-C1-Whg"/>
                             <constraint firstItem="vHB-pQ-egS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="F3n-Qt-OKu"/>
                             <constraint firstAttribute="trailing" secondItem="vHB-pQ-egS" secondAttribute="trailing" id="IOp-do-mS3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pU7-TI-NR2" secondAttribute="bottom" id="Kfc-kb-ue3"/>
                             <constraint firstItem="HDb-ro-HeS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="PHh-df-TIY"/>
                             <constraint firstAttribute="bottom" secondItem="vHB-pQ-egS" secondAttribute="bottom" id="QXS-6j-U15"/>
+                            <constraint firstItem="pU7-TI-NR2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="UdR-HD-DVL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HDb-ro-HeS" secondAttribute="trailing" constant="-16" id="V1j-Wb-TdX"/>
                             <constraint firstItem="vHB-pQ-egS" firstAttribute="top" secondItem="HDb-ro-HeS" secondAttribute="bottom" constant="-50" id="h0t-Ms-IRt"/>
+                            <constraint firstItem="pU7-TI-NR2" firstAttribute="top" secondItem="HDb-ro-HeS" secondAttribute="bottom" id="m7l-06-Nvf"/>
                             <constraint firstItem="HDb-ro-HeS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="mze-Eg-W5D"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dimmingView" destination="pU7-TI-NR2" id="ugD-P9-Rgn"/>
                         <outlet property="searchField" destination="3MQ-bU-tPu" id="jh4-1S-0Fo"/>
                     </connections>
                 </viewController>

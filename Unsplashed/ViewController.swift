@@ -19,7 +19,7 @@
 //Road
 import UIKit
 
-class ViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate  {
+class ViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate ,UITextFieldDelegate {
     
     var items : [Wallpaper] = []
     var menu : TabbarMenu!
@@ -32,6 +32,7 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
     private var buttonRain : UILabel!
     private var buttonHappy : UILabel!
     @IBOutlet weak var searchField: UITextField!
+    @IBOutlet weak var dimmingView: UIVisualEffectView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +46,7 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
         items.append(Wallpaper(name: "name", photo: img!, rating: 1))
         items.append(Wallpaper(name: "name", photo: img!, rating: 1))
         
-        let str = NSAttributedString(string: "Search", attributes: [NSForegroundColorAttributeName:UIColor.white])
+        let str = NSAttributedString(string: "SEARCH", attributes: [NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBold", size: 21)! ])
         searchField.attributedPlaceholder = str
     }
     
@@ -87,10 +88,28 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
     
     
     
-    
-    @IBAction func searchAction(_ sender: UIButton) {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+       toggleDimView(alpha: 1.0)
+
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+       textField.resignFirstResponder()
+        toggleDimView(alpha: 0.0)
+        return true
+    }
+    @IBAction func searchAction(_ sender: UIButton) {
+    
+        searchField.resignFirstResponder()
+        toggleDimView(alpha: 0.0)
+    }
+    
+    func toggleDimView(alpha : Float){
+        
+        UIView.animate(withDuration: 0.4, animations: {
+            self.dimmingView.alpha = CGFloat(alpha)
+        }, completion:nil)
+    }
     func setupMenu(){
         let displayWidth: CGFloat = menu.frame.width
         let displayHeight : CGFloat = menu.frame.height
