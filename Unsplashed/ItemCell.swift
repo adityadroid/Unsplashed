@@ -13,19 +13,9 @@ class ItemCell: UICollectionViewCell {
     @IBOutlet  weak var imageView: UIImageView!
     @IBOutlet  weak var imageCoverView: UIView!
     @IBOutlet  weak var titleLabel: UILabel!
-    @IBOutlet  weak var timeAndRoomLabel: UILabel!
-    @IBOutlet  weak var speakerLabel: UILabel!
+    @IBOutlet  weak var likesLabel: UILabel!
     
-//    var inspiration:Inspiration?{
-//        didSet{
-//            if let inspiration = inspiration{
-//                imageView.image = inspiration.backgroundImage
-//                titleLabel.text = inspiration.title
-//                timeAndRoomLabel.text = inspiration.roomAndTime
-//                speakerLabel.text = inspiration.speaker
-//            }
-//        }
-//    }
+
     override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
         super.apply(layoutAttributes)
         
@@ -40,8 +30,7 @@ class ItemCell: UICollectionViewCell {
         let minAlpha: CGFloat = 0.3
         let maxAlpha: CGFloat = 0.75
         imageCoverView.alpha = maxAlpha - (delta * (maxAlpha - minAlpha))
-        timeAndRoomLabel.alpha = delta
-        speakerLabel.alpha = delta
+        likesLabel.alpha = delta
     }
 }
 

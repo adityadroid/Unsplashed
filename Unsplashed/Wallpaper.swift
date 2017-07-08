@@ -12,10 +12,14 @@ public class Wallpaper{
     var name: String
     var photo: UIImage
     var rating: Int
+    var id: String
+    var fullSizeURL : String
     
-    init(name: String, photo: UIImage, rating: Int) {
+    init(id: String, name: String, photo: UIImage, rating: Int, fullSizeURL : String) {
         self.name = name
         self.photo = photo
         self.rating = rating
+        self.id = id
+        self.fullSizeURL = fullSizeURL
     }
 }
