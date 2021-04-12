@@ -50,8 +50,8 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
 //        items.append(Wallpaper(name: "name", photo: img!, rating: 1))
 //        items.append(Wallpaper(name: "name", photo: img!, rating: 1))
 //        
-        
-        let str = NSAttributedString(string: "SEARCH", attributes: [NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBold", size: 21)! ])
+        //NSAttributedString.Key.fon
+        let str = NSAttributedString(string: "SEARCH", attributes: [NSAttributedString.Key.foregroundColor:UIColor.white, NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-CondensedBold", size: 21)! ])
         searchField.attributedPlaceholder = str
         loadHomeImages(page:page)
      //   getImage("fog")
@@ -149,7 +149,7 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
         toggleDimView(alpha: 0.0)
         query = searchField.text
 
-        if query.characters.count>0{
+        if query.count>0{
             isHome = false
             
             items.removeAll()
@@ -474,7 +474,7 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
         
     }
   
-    func onMenuItemClicked(_ sender: UITapGestureRecognizer){
+    @objc func onMenuItemClicked(_ sender: UITapGestureRecognizer){
         menu.triggerAction()
         isHome = false
         items.removeAll()

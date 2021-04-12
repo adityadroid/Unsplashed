@@ -10,7 +10,7 @@ import UIKit
 
 enum MenuTextureType {
     case withColor(color: UIColor)
-    case withBlur(blurStyle: UIBlurEffectStyle)
+    case withBlur(blurStyle: UIBlurEffect.Style)
 }
 
 class TabbarMenu: UIView {
@@ -29,8 +29,8 @@ class TabbarMenu: UIView {
     fileprivate var initialFrame : CGRect?
     fileprivate var animateButton : AnimatedButton?
     fileprivate var bouncyMask: CAShapeLayer?
-    fileprivate var textureType: MenuTextureType = .withColor(color: UIColor(colorLiteralRed: 50/255.0, green: 58/255.0, blue: 68/255.0, alpha: 1.0))
-    
+    fileprivate var textureType: MenuTextureType = .withColor(color: UIColor(red: 50/255.0, green: 58/255.0, blue: 68/255.0, alpha: 1.0))
+
     var topSpace : CGFloat = 64.0 //留白
     fileprivate var tabbarheight : CGFloat = 0.0 //tabbar高度
     
@@ -76,7 +76,7 @@ class TabbarMenu: UIView {
             let backgroundBlurView = UIVisualEffectView(effect: UIBlurEffect(style: blurStyle))
             backgroundBlurView.frame = self.bounds
             addSubview(backgroundBlurView)
-            var dimmingStyle: UIBlurEffectStyle
+            var dimmingStyle: UIBlurEffect.Style
             switch blurStyle {
             case .dark:
                 dimmingStyle = .light
@@ -196,7 +196,7 @@ class TabbarMenu: UIView {
         if displayLink == nil
         {
             self.displayLink = CADisplayLink(target: self, selector: #selector(TabbarMenu.update(_:)))
-            self.displayLink.add(to: RunLoop.main, forMode: RunLoopMode.defaultRunLoopMode)
+            self.displayLink.add(to: RunLoop.main, forMode: RunLoop.Mode.defaultRunLoopMode)
         }
         animationCount += 1
     }
